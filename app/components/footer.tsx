@@ -23,7 +23,7 @@ const Footer = (props: Props) => {
             <input
               placeholder="Your Email"
               type="email"
-              className="w-full placeholder-zinc-50 border bg-[#ABC485] border-b-white border-t-[#ABC485] border-l-[#ABC485] border-r-[#ABC485]"
+              className="w-full placeholder-zinc-50 border bg-[#ABC485] border-b-white border-t-[#ABC485] border-l-[#ABC485] border-r-[#ABC485] outline-none"
             />
             <button className="flex gap-2 items-center justify-between absolute right-0 top-0">
               <p>Subscribe</p>
