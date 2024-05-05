@@ -111,8 +111,8 @@ export default function Home() {
                     ))}
                 </div>
             </div>
-            {/* Get Inspired */}
-            <div>
+            {/* Get Inspired COMMENTED OUT*/}
+            {/* <div>
                 <h1 className="text-4xl max-lg:text-xl max-sm:text-lg font-bold text-center">
                     Get Inspired!
                 </h1>
@@ -132,7 +132,7 @@ export default function Home() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }
