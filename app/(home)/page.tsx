@@ -4,14 +4,14 @@ import Link from "next/link";
 export default function Home() {
   const products = [
     {
-      path: "/images/home/products/baxter.jpg",
+      path: "/images/home/products/cc-tapis.jpg",
       title: "Baxter",
-      url: "https://www.baxter.it/en/",
+      url: "https://www.cc-tapis.com/",
     },
     {
-      path: "/images/home/products/cassina.jpg",
+      path: "/images/home/products/Edra.jpeg",
       title: "Cassina",
-      url: "https://www.cassina.com/ww/en.html",
+      url: "https://www.edra.com/en/home",
     },
     {
       path: "/images/home/products/flexform.jpg",
@@ -19,14 +19,14 @@ export default function Home() {
       url: "https://www.flexform.it/en",
     },
     {
-      path: "/images/home/products/Edra.jpeg",
+      path: "/images/home/products/cassina.jpg",
       title: "Edra",
-      url: "https://www.edra.com/en/home",
+      url: "https://www.cassina.com/ww/en.html",
     },
     {
-      path: "/images/home/products/cc-tapis.jpg",
+      path: "/images/home/products/baxter.jpg",
       title: "Flexform",
-      url: "https://www.cc-tapis.com/",
+      url: "https://www.baxter.it/en/",
     },
     {
       path: "/images/home/products/henge.jpg",
