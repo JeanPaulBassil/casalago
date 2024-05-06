@@ -15,13 +15,8 @@ export default function Home() {
     },
     {
       path: "/images/home/products/flexform.jpg",
-      title: "Flexform",
-      url: "https://www.flexform.it/en",
-    },
-    {
-      path: "/images/home/products/cc-tapis.jpg",
       title: "CC-Tapis",
-      url: "https://www.cc-tapis.com/",
+      url: "https://www.flexform.it/en",
     },
     {
       path: "/images/home/products/Edra.jpeg",
@@ -29,19 +24,24 @@ export default function Home() {
       url: "https://www.edra.com/en/home",
     },
     {
+      path: "/images/home/products/cc-tapis.jpg",
+      title: "Flexform",
+      url: "https://www.cc-tapis.com/",
+    },
+    {
       path: "/images/home/products/henge.jpg",
       title: "Henge",
       url: "https://www.henge07.com/",
     },
     {
-      path: "/images/home/products/paoplaLengti.jpg",
+      path: "/images/home/products/USMModularFurniture.jpg",
       title: "Paola Lenti",
-      url: "https://www.paolalenti.it/en/",
+      url: "https://us.usm.com/",
     },
     {
-      path: "/images/home/products/USMModularFurniture.jpg",
+      path: "/images/home/products/paoplaLengti.jpg",
       title: "USM Modular Furniture",
-      url: "https://us.usm.com/",
+      url: "https://www.paolalenti.it/en/",
     },
   ];
   // inspirations are 6 images of the products above
