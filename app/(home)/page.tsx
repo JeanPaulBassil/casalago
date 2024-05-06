@@ -4,34 +4,44 @@ import Link from "next/link";
 export default function Home() {
     const products = [
         {
-            path: "/images/home/products/baxter.png",
+            path: "/images/home/products/baxter.jpg",
             title: "Baxter",
             url: "https://www.baxter.it/en/"
         },
         {
-            path: "/images/home/products/cassina.png",
+            path: "/images/home/products/cassina.jpg",
             title: "Cassina",
             url: "https://www.cassina.com/ww/en.html"
         },
         {
-            path: "/images/home/products/flexform.png",
+            path: "/images/home/products/flexform.jpg",
             title: "Flexform",
             url: "https://www.flexform.it/en"
         },
         {
-            path: "/images/home/products/tapis.png",
-            title: "c-c tapis",
+            path: "/images/home/products/cc-tapis.jpg",
+            title: "CC-Tapis",
             url: "https://www.cc-tapis.com/"
         },
         {
-            path: "/images/home/products/usm.png",
-            title: "USM",
-            url: "https://us.usm.com/"
-        },
-        {
-            path: "/images/home/products/edra.png",
+            path: "/images/home/products/Edra.jpeg",
             title: "Edra",
             url: "https://www.edra.com/en/home"
+        },
+        {
+            path: "/images/home/products/henge.jpg",
+            title: "Henge",
+            url: "https://www.henge07.com/"
+        },
+        {
+            path: "/images/home/products/paoplaLengti.jpg",
+            title: "Paola Lenti",
+            url: "https://www.paolalenti.it/en/"
+        },
+        {
+            path: "/images/home/products/USMModularFurniture.jpg",
+            title: "USM Modular Furniture",
+            url: "https://us.usm.com/"
         },
     ];
     // inspirations are 6 images of the products above
@@ -99,14 +109,14 @@ export default function Home() {
                         <Link
                             href={product.url}
                             key={index}
-                            className="justify-self-center flex flex-col items-start gap-4 w-[500px] h-[500px] max-2xl:w-[350px] max-2xl:h-[350px] max-sm:w-[300px] max-sm:h-[300px]"
+                            className="justify-self-center flex flex-col items-start gap-4 w-[450px] h-[500px] max-2xl:w-[350px] max-2xl:h-[350px] max-sm:w-[300px] max-sm:h-[300px]"
                         >
                             <Image
                                 src={product.path}
                                 alt={product.title}
                                 width={1920}
                                 height={1080}
-                                className="w-[500px] h-[500px] max-2xl:w-[350px] max-2xl:h-[350px] max-sm:w-[300px] max-sm:h-[300px] object-cover"
+                                className="w-[450px] h-[450px] max-2xl:w-[350px] max-2xl:h-[350px] max-sm:w-[300px] max-sm:h-[300px] object-cover"
                             />
                             <div className="border border-y-black border-x-white w-full">
                                 {/* <div className="w-[500px] max-lg:w-[400px] max-sm:w-[300px] h-[1px] bg-black"></div> */}

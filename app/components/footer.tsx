@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { sendMail } from "../lib/mail";
 
 type Props = {};
 
@@ -11,6 +12,17 @@ const Footer = (props: Props) => {
     "/icons/linkedin.png",
     "/icons/youtube.svg",
   ];
+
+  const sendEmail = async () => {
+    "use server";
+    await sendMail({
+      to: "jean.paul.bassil@outlook.com",
+      name: "Jean Paul Bassil",
+      subject: "Hello",
+      body: "This is a test email",
+    });
+  };
+
   return (
     <div className="bg-[#ABC485] 2xl:px-24 xl:px-20 lg:px-16 md:px-10 sm:px-5 px-2 text-white pt-8 py-4 flex flex-col gap-4">
       <div className="flex flex-row justify-between max-md:flex-col gap-12">
@@ -19,13 +31,19 @@ const Footer = (props: Props) => {
           <h1 className="font-semibold text-lg mb-2">
             Sign up for exclusive news!
           </h1>
-          <form action="" className="relative max-sm:w-3/4 min-w-[200px] max-w-[400px]">
+          <form
+            action=""
+            className="relative max-sm:w-3/4 min-w-[200px] max-w-[400px]"
+          >
             <input
               placeholder="Your Email"
               type="email"
               className="w-full placeholder-zinc-50 border bg-[#ABC485] border-b-white border-t-[#ABC485] border-l-[#ABC485] border-r-[#ABC485] outline-none focus:outline-none"
             />
-            <button className="flex gap-2 items-center justify-between absolute right-0 top-0">
+            <button
+              className="flex gap-2 items-center justify-between absolute right-0 top-0"
+              formAction={sendEmail}
+            >
               <p>Subscribe</p>
               <Image
                 src="/icons/right-arrow.png"
