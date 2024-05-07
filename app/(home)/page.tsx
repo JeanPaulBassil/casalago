@@ -102,14 +102,14 @@ export default function Home() {
         <h1 className="text-4xl max-lg:text-xl max-sm:text-lg font-bold text-center">
           Our Products
         </h1>
-        <div className="w-full my-10 grid auto-cols-max grid-flow-row grid-cols-[repeat(auto-fill,minmax(500px,1fr))] max-2xl:grid-cols-[repeat(auto-fill,minmax(330px,1fr))] max-sm:grid-cols-[repeat(auto-fill,minmax(280px,1fr))] max-sm:pb-6 gap-12">
+        <div className="w-full my-10 grid auto-cols-max grid-flow-row grid-cols-[repeat(auto-fill,minmax(408px,1fr))] max-sm:pb-6 gap-5">
           {products.map((product, index) => (
             <Link
               href={product.url}
               key={index}
-              className="justify-self-center flex flex-col items-start gap-4 w-[450px] h-[500px] max-2xl:w-[350px] max-2xl:h-[350px] max-sm:w-[300px] max-sm:h-[300px]"
+              className="justify-self-center flex flex-col items-start gap-4 w-[408px] max-2xl:h-[350px] max-sm:h-[300px]"
             >
-              <div className="w-[450px] h-[450px] max-2xl:w-[350px] max-2xl:h-[350px] max-sm:w-[300px] max-sm:h-[300px] relative">
+              <div className="w-[408px] h-[280px] relative">
                 <Image
                   src={product.path}
                   alt={product.title}
