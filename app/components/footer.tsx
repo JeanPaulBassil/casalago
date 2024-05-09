@@ -15,12 +15,7 @@ const Footer = (props: Props) => {
 
   const sendEmail = async () => {
     "use server";
-    await sendMail({
-      to: "jean.paul.bassil@outlook.com",
-      name: "Jean Paul Bassil",
-      subject: "Hello",
-      body: "This is a test email",
-    });
+    console.log("Email sent");
   };
 
   return (
@@ -32,17 +27,18 @@ const Footer = (props: Props) => {
             Sign up for exclusive news!
           </h1>
           <form
-            action=""
+            action={sendEmail}
             className="relative max-sm:w-3/4 min-w-[200px] max-w-[400px]"
           >
             <input
               placeholder="Your Email"
               type="email"
+              name="email"
               className="w-full placeholder-zinc-50 border bg-[#ABC485] border-b-white border-t-[#ABC485] border-l-[#ABC485] border-r-[#ABC485] outline-none focus:outline-none"
             />
             <button
+            type="submit"
               className="flex gap-2 items-center justify-between absolute right-0 top-0"
-              formAction={sendEmail}
             >
               <p>Subscribe</p>
               <Image

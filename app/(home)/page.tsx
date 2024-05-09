@@ -53,7 +53,7 @@ export default function Home() {
     "/images/home/products/edra.png",
   ];
   return (
-    <div className="">
+    <div className="w-full">
       <Image
         src="/images/home/banner.png"
         alt="banner"
@@ -98,18 +98,18 @@ export default function Home() {
         </div>
       </div>
       {/* Our Products */}
-      <div className="lg:py-24">
+      <div className="lg:py-24 w-full">
         <h1 className="text-4xl max-lg:text-xl max-sm:text-lg font-bold text-center">
           Our Products
         </h1>
-        <div className="w-full my-10 grid auto-cols-max grid-flow-row grid-cols-[repeat(auto-fill,minmax(408px,1fr))] max-sm:pb-6 gap-5">
+        <div className="w-full my-10 grid auto-cols-max grid-flow-row grid-cols-[repeat(auto-fill,minmax(408px,1fr))] max-sm:grid-cols-[repeat(auto-fill,minmax(300px,1fr))] max-sm:pb-6 gap-5">
           {products.map((product, index) => (
             <Link
               href={product.url}
               key={index}
-              className="justify-self-center flex flex-col items-start gap-4 w-[408px] max-2xl:h-[350px] max-sm:h-[300px]"
+              className="justify-self-center flex flex-col items-start gap-4 w-[408px] max-2xl:h-[350px] max-sm:w-full"
             >
-              <div className="w-[408px] h-[280px] relative">
+              <div className="w-[408px] h-[280px] max-sm:w-full relative">
                 <Image
                   src={product.path}
                   alt={product.title}
