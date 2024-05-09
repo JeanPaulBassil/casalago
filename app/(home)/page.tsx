@@ -4,29 +4,29 @@ import Link from "next/link";
 export default function Home() {
   const products = [
     {
-      path: "/images/home/products/cc-tapis.jpg",
+      path: "/images/home/products/baxter.jpg",
       title: "Baxter",
+      url: "https://www.baxter.it/en/",
+    },
+    {
+      path: "/images/home/products/cassina.jpeg",
+      title: "Cassina",
+      url: "https://www.cassina.com/ww/en.html",
+    },
+    {
+      path: "/images/home/products/cc-tapis.jpg",
+      title: "cc-tapis",
       url: "https://www.cc-tapis.com/",
     },
     {
-      path: "/images/home/products/Edra.jpeg",
-      title: "Cassina",
+      path: "/images/home/products/Edra.jpg",
+      title: "Edra",
       url: "https://www.edra.com/en/home",
     },
     {
       path: "/images/home/products/flexform.jpg",
-      title: "CC-Tapis",
-      url: "https://www.flexform.it/en",
-    },
-    {
-      path: "/images/home/products/cassina.jpg",
-      title: "Edra",
-      url: "https://www.cassina.com/ww/en.html",
-    },
-    {
-      path: "/images/home/products/baxter.jpg",
       title: "Flexform",
-      url: "https://www.baxter.it/en/",
+      url: "https://www.flexform.it/en",
     },
     {
       path: "/images/home/products/henge.jpg",
@@ -34,14 +34,14 @@ export default function Home() {
       url: "https://www.henge07.com/",
     },
     {
-      path: "/images/home/products/USMModularFurniture.jpg",
+      path: "/images/home/products/paoplaLengti.jpg",
       title: "Paola Lenti",
-      url: "https://us.usm.com/",
+      url: "https://www.paolalenti.it/en/",
     },
     {
-      path: "/images/home/products/paoplaLengti.jpg",
+      path: "/images/home/products/USMModularFurniture.jpg",
       title: "USM Modular Furniture",
-      url: "https://www.paolalenti.it/en/",
+      url: "https://us.usm.com/",
     },
   ];
   // inspirations are 6 images of the products above
@@ -64,7 +64,7 @@ export default function Home() {
       {/* Below the banner */}
       <div className="w-full flex py-12 lg:py-24 items-center max-lg:flex-col max-lg:gap-4">
         <h1 className="lg:self-start lg:w-1/2 text-4xl max-lg:text-xl max-sm:text-lg font-bold max-lg:text-center">
-          Your Very Own <br /> Personal Living Space.
+          Your very own <br /> personal living space.
         </h1>
         <p className="font-medium lg:w-1/2 text-xl max-lg:text-lg max-sm:text-base max-lg:text-center">
           Casalago believes that a home is not just a place, but a reflection of
@@ -79,14 +79,14 @@ export default function Home() {
       <div className="flex items-center max-lg:flex-col">
         <Image
           src="/images/home/liveBetter.png"
-          alt="Live Better Feel Better"
+          alt="Live better, feel better."
           width={1920}
           height={1080}
           className="w-[48%] max-lg:w-full"
         />
         <div className="flex flex-col w-1/2 max-lg:w-full px-8 gap-4 py-12">
           <h2 className="text-4xl max-lg:text-xl max-sm:text-lg font-bold max-lg:text-center">
-            Live Better Feel Better
+            Live better, feel better.
           </h2>
           <p className="font-medium text-xl max-lg:text-lg max-sm:text-base max-lg:text-center">
             We shape your environment to perfectly suit your lifestyle,
