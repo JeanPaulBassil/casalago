@@ -55,7 +55,7 @@ export default function Home() {
   return (
     <div className="w-full">
       <Image
-        src="/images/home/banner.png"
+        src="/images/home/banner.jpg"
         alt="banner"
         width={1920}
         height={1080}
@@ -78,7 +78,7 @@ export default function Home() {
       {/* Live Better Feel Better */}
       <div className="flex items-center max-lg:flex-col">
         <Image
-          src="/images/home/liveBetter.png"
+          src="/images/home/liveBetter.jpg"
           alt="Live better, feel better."
           width={1920}
           height={1080}
@@ -104,24 +104,20 @@ export default function Home() {
         </h1>
         <div className="w-full my-10 grid auto-cols-max grid-flow-row grid-cols-[repeat(auto-fill,minmax(408px,1fr))] max-sm:grid-cols-[repeat(auto-fill,minmax(300px,1fr))] max-sm:pb-6 gap-5">
           {products.map((product, index) => (
-            <Link
-              href={product.url}
-              key={index}
-              className="justify-self-center flex flex-col items-start gap-4 w-[408px] max-2xl:h-[350px] max-sm:w-full"
-            >
-              <div className="w-[408px] h-[280px] max-sm:w-full relative">
-                <Image
-                  src={product.path}
-                  alt={product.title}
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </div>
-              <div className="border border-y-black border-x-white w-full">
-                <h2 className="text-2xl max-lg:text-xl max-sm:text-lg my-1 font-medium">
-                  {product.title}
-                </h2>
-              </div>
+            <Link href={product.url} key={index} passHref target="_blank">
+                <div className="w-[408px] h-[280px] max-sm:w-full relative">
+                  <Image
+                    src={product.path}
+                    alt={product.title}
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+                <div className="border border-y-black border-x-white w-full">
+                  <h2 className="text-2xl max-lg:text-xl max-sm:text-lg my-1 font-medium">
+                    {product.title}
+                  </h2>
+                </div>
             </Link>
           ))}
         </div>
