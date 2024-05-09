@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Home() {
   const products = [
     {
-      path: "/images/home/products/baxter.jpg",
+      path: "/images/home/products/BAXTER.jpg",
       title: "Baxter",
       url: "https://www.baxter.it/en/",
     },
