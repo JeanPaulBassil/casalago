@@ -1,22 +1,17 @@
+'use client'
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { sendMail } from "../lib/mail";
+import { subToNewsLetter } from "../lib/actions/newsLettersAction";
 
-type Props = {};
-
-const Footer = (props: Props) => {
+const Footer = () => {
   const socials = [
     "/icons/facebook.png",
     "/icons/instagram.png",
     "/icons/linkedin.png",
     "/icons/youtube.svg",
   ];
-
-  const sendEmail = async () => {
-    "use server";
-    console.log("Email sent");
-  };
+  const [email, setEmail] = React.useState("");
 
   return (
     <div className="bg-[#ABC485] 2xl:px-24 xl:px-20 lg:px-16 md:px-10 sm:px-5 px-2 text-white pt-8 py-4 flex flex-col gap-4">
@@ -27,17 +22,20 @@ const Footer = (props: Props) => {
             Sign up for exclusive news!
           </h1>
           <form
-            action={sendEmail}
-            className="relative max-sm:w-3/4 min-w-[200px] max-w-[400px]"
+            action={subToNewsLetter}
+            className="relative max-sm:w-3/4 min-w-[200px] max-w-[400px] lg:w-full"
           >
             <input
               placeholder="Your Email"
               type="email"
               name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="w-full placeholder-zinc-50 border bg-[#ABC485] border-b-white border-t-[#ABC485] border-l-[#ABC485] border-r-[#ABC485] outline-none focus:outline-none"
             />
             <button
             type="submit"
+            onClick={()=> setEmail("")}
               className="flex gap-2 items-center justify-between absolute right-0 top-0"
             >
               <p>Subscribe</p>
