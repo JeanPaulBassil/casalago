@@ -2,7 +2,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { subToNewsLetter } from "../lib/actions/newsLettersAction";
 
 const Footer = () => {
   const socials = [
@@ -22,7 +21,6 @@ const Footer = () => {
             Sign up for exclusive news!
           </h1>
           <form
-            action={subToNewsLetter}
             className="relative max-sm:w-3/4 min-w-[200px] max-w-[400px] lg:w-full"
           >
             <input
