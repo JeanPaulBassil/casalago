@@ -7,6 +7,7 @@ import ReactQueryClientProvider from '@/providers/ReactQueryProvider'
 import Header from './_components/Header'
 import Image from 'next/image'
 import Footer from './_components/Footer'
+import BasicNavbar from './_components/Basicnavbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,8 +26,8 @@ export default function RootLayout({
       <body className={inter.className}>
         <ReactQueryClientProvider>
           <NextUIProvider>
-            <div className="h-screen w-full ">
-              <Header />
+            <div className="h-screen w-full">
+              <BasicNavbar />
               {children}
               <Footer />
             </div>
