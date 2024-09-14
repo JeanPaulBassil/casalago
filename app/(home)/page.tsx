@@ -4,29 +4,29 @@ import Link from "next/link";
 export default function Home() {
   const products = [
     {
-      path: "/images/home/products/BAXTER.jpg",
-      title: "Baxter",
-      url: "https://www.baxter.it/en/",
-    },
-    {
-      path: "/images/home/products/cassina.jpeg",
-      title: "Cassina",
-      url: "https://www.cassina.com/ww/en.html",
-    },
-    {
       path: "/images/home/products/cc-tapis.jpg",
-      title: "cc-tapis",
+      title: "Baxter",
       url: "https://www.cc-tapis.com/",
     },
     {
-      path: "/images/home/products/Edra.jpg",
-      title: "Edra",
+      path: "/images/home/products/Edra.jpeg",
+      title: "Cassina",
       url: "https://www.edra.com/en/home",
     },
     {
       path: "/images/home/products/flexform.jpg",
-      title: "Flexform",
+      title: "CC-Tapis",
       url: "https://www.flexform.it/en",
+    },
+    {
+      path: "/images/home/products/cassina.jpg",
+      title: "Edra",
+      url: "https://www.cassina.com/ww/en.html",
+    },
+    {
+      path: "/images/home/products/baxter.jpg",
+      title: "Flexform",
+      url: "https://www.baxter.it/en/",
     },
     {
       path: "/images/home/products/henge.jpg",
@@ -34,14 +34,14 @@ export default function Home() {
       url: "https://www.henge07.com/",
     },
     {
-      path: "/images/home/products/paoplaLengti.jpg",
+      path: "/images/home/products/USMModularFurniture.jpg",
       title: "Paola Lenti",
-      url: "https://www.paolalenti.it/en/",
+      url: "https://us.usm.com/",
     },
     {
-      path: "/images/home/products/USMModularFurniture.jpg",
+      path: "/images/home/products/paoplaLengti.jpg",
       title: "USM Modular Furniture",
-      url: "https://us.usm.com/",
+      url: "https://www.paolalenti.it/en/",
     },
   ];
   // inspirations are 6 images of the products above
@@ -53,9 +53,9 @@ export default function Home() {
     "/images/home/products/edra.png",
   ];
   return (
-    <div className="w-full">
+    <div className="">
       <Image
-        src="/images/home/banner.jpg"
+        src="/images/home/banner.png"
         alt="banner"
         width={1920}
         height={1080}
@@ -64,7 +64,7 @@ export default function Home() {
       {/* Below the banner */}
       <div className="w-full flex py-12 lg:py-24 items-center max-lg:flex-col max-lg:gap-4">
         <h1 className="lg:self-start lg:w-1/2 text-4xl max-lg:text-xl max-sm:text-lg font-bold max-lg:text-center">
-          Your very own <br /> personal living space.
+          Your Very Own <br /> Personal Living Space.
         </h1>
         <p className="font-medium lg:w-1/2 text-xl max-lg:text-lg max-sm:text-base max-lg:text-center">
           Casalago believes that a home is not just a place, but a reflection of
@@ -78,15 +78,15 @@ export default function Home() {
       {/* Live Better Feel Better */}
       <div className="flex items-center max-lg:flex-col">
         <Image
-          src="/images/home/liveBetter.jpg"
-          alt="Live better, feel better."
+          src="/images/home/liveBetter.png"
+          alt="Live Better Feel Better"
           width={1920}
           height={1080}
           className="w-[48%] max-lg:w-full"
         />
         <div className="flex flex-col w-1/2 max-lg:w-full px-8 gap-4 py-12">
           <h2 className="text-4xl max-lg:text-xl max-sm:text-lg font-bold max-lg:text-center">
-            Live better, feel better.
+            Live Better Feel Better
           </h2>
           <p className="font-medium text-xl max-lg:text-lg max-sm:text-base max-lg:text-center">
             We shape your environment to perfectly suit your lifestyle,
@@ -98,26 +98,30 @@ export default function Home() {
         </div>
       </div>
       {/* Our Products */}
-      <div className="lg:py-24 w-full">
+      <div className="lg:py-24">
         <h1 className="text-4xl max-lg:text-xl max-sm:text-lg font-bold text-center">
           Our Products
         </h1>
-        <div className="w-full my-10 grid auto-cols-max grid-flow-row grid-cols-[repeat(auto-fill,minmax(408px,1fr))] max-sm:grid-cols-[repeat(auto-fill,minmax(300px,1fr))] max-sm:pb-6 gap-5">
+        <div className="w-full my-10 grid auto-cols-max grid-flow-row grid-cols-[repeat(auto-fill,minmax(408px,1fr))] max-sm:pb-6 gap-5">
           {products.map((product, index) => (
-            <Link href={product.url} key={index} passHref target="_blank">
-                <div className="w-[408px] h-[280px] max-sm:w-full relative">
-                  <Image
-                    src={product.path}
-                    alt={product.title}
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </div>
-                <div className="border border-y-black border-x-white w-full">
-                  <h2 className="text-2xl max-lg:text-xl max-sm:text-lg my-1 font-medium">
-                    {product.title}
-                  </h2>
-                </div>
+            <Link
+              href={product.url}
+              key={index}
+              className="justify-self-center flex flex-col items-start gap-4 w-[408px] max-2xl:h-[350px] max-sm:h-[300px]"
+            >
+              <div className="w-[408px] h-[280px] relative">
+                <Image
+                  src={product.path}
+                  alt={product.title}
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+              <div className="border border-y-black border-x-white w-full">
+                <h2 className="text-2xl max-lg:text-xl max-sm:text-lg my-1 font-medium">
+                  {product.title}
+                </h2>
+              </div>
             </Link>
           ))}
         </div>
