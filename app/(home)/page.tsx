@@ -24,7 +24,7 @@ export default function Home() {
       url: "https://www.cassina.com/ww/en.html",
     },
     {
-      path: "/images/home/products/baxter.jpg",
+      path: "/images/home/products/BAXTER.jpg",
       title: "Flexform",
       url: "https://www.baxter.it/en/",
     },
